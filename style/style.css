@@ -1,0 +1,613 @@
+/* header styling start */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+}
+
+.header-section {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+}
+
+.navbar {
+    background-color: rgb(0, 0, 0);
+    padding: 13px 0px;
+}
+.sticky-top{
+    position: fixed !important;
+    top: 0 !important;
+
+}
+.navbar-brand {
+    font-size: 24px;
+    color: #fa353f;
+    box-shadow: 0px 0px 25px 0px #fa353f;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 9px;
+    transition: 0.5s;
+
+}
+
+.nav-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.navbar-brand:hover {
+    background-color: white;
+    border-radius: 10px;
+    color: #fa353f;
+    box-shadow: 0px 0px 25px 0px white;
+
+}
+
+.nav-link {
+    color: rgb(241, 241, 241);
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 5px;
+    text-align: center;
+    letter-spacing: 0.3px;
+
+}
+
+.nav-link:focus {
+    color: white;
+}
+
+
+
+.active {
+    color: #fa353f;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 0px #fa353f;
+    font-weight: bold;
+
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.navbar-nav .nav-item a::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: #fa353f;
+    display: block;
+    margin: auto;
+    margin-top: 1px;
+    transition: 0.5s;
+
+}
+
+.navbar-nav .nav-item a:hover::after {
+    width: 70%;
+    box-shadow: 2px 2px 15px 2px white;
+
+}
+
+.navbar-toggler {
+    color: white;
+    border: 5px solid white;
+    border-radius: 8px;
+}
+
+.navbar-toggler-icon .fa {
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+@media (max-width:720px) {
+    .nav-item {
+        margin-top: 27px;
+    }
+}
+
+@media (max-width:320px) {
+    .navbar-brand {
+        font-size: 20px;
+    }
+
+    .navbar-toggler {
+        padding: 0.15rem 0.50rem;
+    }
+
+}
+
+
+/* hero section styling */
+
+.hero-section {
+    background-color: #121212;
+    color: white;
+    padding-top: 30px;
+}
+
+.hero-container {
+    width: 85%;
+    margin: 0 auto;
+
+}
+
+
+
+
+.heist,
+.de {
+    color: #070203;
+    background-image: linear-gradient(to right, #DC0010, #71090f);
+    padding: 0px 5px;
+    box-shadow: 0px 0px 15px 0px #000000;
+    border-radius: 15px;
+    display: inline-block;
+    -ms-transform: rotate(-5deg);
+    /* IE 9 */
+    transform: rotate(-5deg);
+    transition: 0.5s;
+
+
+}
+
+.heist:hover,
+.de:hover {
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    transform: rotate(0deg);
+}
+
+.download,
+.watch:hover {
+    background-image: linear-gradient(to right, #DC0010, #71090f);
+    border: none;
+    color: white;
+    box-shadow: 0px 0px 8px 0px #fa353f;
+    font-weight: bold;
+    transition: 0.4s;
+
+}
+
+.watch,
+.download:hover {
+    background-image: linear-gradient(to right, #ffffff, #ffffff);
+    color: #DC0010;
+    box-shadow: 0px 0px 9px 0px #ffffff;
+    font-weight: bold;
+    transition: 0.4s;
+    border: none;
+
+}
+
+
+
+
+
+@media (max-width:990px) {
+    .hero-section .col-sm-8 {
+        flex: 0 0 auto;
+        width: 80.666667%;
+        margin: 0 auto;
+    }
+}
+
+
+
+
+
+
+/* latest section styling */
+
+.latest {
+    background-color: black;
+    color: white;
+}
+
+.latest-movies {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.latest-movies .col {
+    width: 180px;
+
+}
+
+.card-img {
+    position: relative;
+    box-shadow: 10px 10px 24px 4px black;
+
+}
+
+.card-img img {
+    display: block;
+    width: 100%;
+}
+
+.img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.25s;
+
+}
+
+.img-overlay>* {
+    transform: translateY(20px);
+    transition: 0.25s;
+}
+
+
+.img-overlay:hover>* {
+    transform: translateY(0px);
+}
+
+.img-overlay:hover {
+    opacity: 1;
+}
+
+.img-title {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.img-text {
+    font-size: 0.7em;
+}
+
+/* member ship sectio styling  */
+
+
+.membership {
+    margin-top: 3em;
+    height: 320px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/membership-back.jpg");
+    background-color: #070203;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+
+}
+
+.membership h1 {
+    color: white;
+}
+
+.input-field input {
+    padding: 5px 50px 10px 5px;
+    border-radius: 4px;
+    font-size: 24px;
+    width: 50%;
+}
+
+.input-field input:focus {
+    outline: none;
+}
+
+.input-field button {
+    font-size: 18px;
+    padding: 12px;
+}
+
+.top-rated {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/blockbuster.jpg");
+}
+
+
+
+/* footer syling */
+
+
+:root {
+    --footer-bg: #1c2444;
+    --color: white;
+    --color-smooth: white;
+    --input-border: #ffffff;
+    --btn-bg-color: #f1f2fc;
+    --btn-hover-bg: #d5d9f6;
+    --btn-color: gray;
+}
+
+footer {
+    font-size: 16px;
+    background-image: linear-gradient(to right, #000000, #000000);
+    padding: 2em 4em;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 1em;
+    background-color: #1f1f1f;
+    color: white;
+    text-align: left;
+    margin-top: 60px;
+}
+#email{
+    color: black !important;
+}
+footer ul {
+    list-style: none;
+    padding: 0px;
+}
+
+footer .col {
+    flex: 1;
+}
+
+footer .col-title {
+    color: var(--color);
+    font-size: 19px;
+    font-weight: 600;
+    padding: 0.5em 0;
+}
+
+footer .col-list a {
+    text-decoration: none;
+    line-height: 1.4;
+    font-weight: 400;
+    color: rgb(236, 232, 232);
+}
+
+footer .col-list a:hover,
+footer .col-list a:focus {
+    text-decoration: underline;
+}
+
+footer .subscribe-form,
+footer .social-media {
+    display: flex;
+    gap: 0.5em;
+    padding: 0.5em 0;
+}
+
+footer .subscribe-input {
+    width: auto;
+    flex: 1;
+    background: white;
+    border: 0.06em solid var(--input-border);
+    font-size: 1em;
+    font-weight: 500;
+    padding: 0.5em;
+    border-radius: 0.3em;
+    transition: all 0.25s ease 0s;
+    display: inline-block;
+    color: var(--color-smooth);
+}
+
+footer .subscribe-input:focus {
+    outline: none;
+    border-color: var(--color);
+    color: var(--color);
+}
+
+footer .subscribe-btn {
+    background: var(--btn-bg-color);
+    border: none;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 0.5em;
+    border-radius: 0.3em;
+    transition: all 0.25s ease 0s;
+    display: inline-block;
+    color: var(--btn-color);
+    cursor: pointer;
+}
+
+footer .subscribe-btn:hover,
+footer .subscribe-btn:focus {
+    background: var(--btn-hover-bg);
+}
+
+footer .form-title,
+footer .social-col-title {
+    font-size: 1em;
+    color: var(--color);
+    font-weight: 500;
+}
+
+footer .social-media {
+    flex-direction: column;
+}
+
+footer .social-media-list {
+    display: flex;
+    gap: 0.5rem;
+}
+
+footer .social-media-list a {
+    padding: 0.5em;
+    color: var(--color-smooth);
+    display: flex;
+    border-radius: 0.3em;
+    transition: all 0.25s ease 0s;
+}
+
+footer .social-media-list a:hover,
+footer .social-media-list a:focus {
+    color: var(--color);
+    background: #ffffff1a;
+}
+
+footer .social-media-list svg {
+    width: 1.5em;
+    height: 1.5em;
+    transition: all 0.25s ease 0s;
+}
+
+@media screen and (max-width: 750px) {
+    footer {
+        padding: 2em;
+        flex-direction: column;
+    }
+
+}
+
+/* home page styling complete */
+
+
+
+/* web series page styling start */
+
+
+
+/* web hero section stylin  */
+
+
+.web-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../img/web-hero-2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 110px;
+    padding-bottom: 20px;
+
+}
+
+
+/* under rated web series styling  */
+
+
+.under-rated{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("../img/underrated.jpg");  
+}
+
+
+
+/* squid game section styling  */
+
+.squid-game{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("../img/squid.jpeg");  
+
+}
+
+.squid-game .col{
+    width: 45%;
+}
+
+
+
+
+/* Movies page syling start  */
+
+.movies-hero{
+    height: 460px;
+    padding-top: 180px !important;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("../img/hollywood-hero.jpg");  
+}
+
+.movie-animated{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("../img/animated.gif");  
+
+}
+
+
+.top-rated-movies{
+    width: 20% !important;
+}
+
+.top-rated-back{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/rate-back.jpg");  
+    height: 350px;
+}
+
+
+
+.r-right{
+    transform: rotate(7deg);
+
+}
+
+
+/* drama page styling start  */
+
+
+.drama-hero{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/drama-hero.jpg");  
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 120px;
+    padding-bottom: 40px;
+    border-bottom-right-radius: 30% !important;
+    border-bottom-left-radius: 30% !important;
+    border-bottom: 9px solid #DC0010;
+
+}
+
+.drama-cards .col{
+    width: 300px;
+}
+.top-rated-drama{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/top-rated-drama.jpg");  
+}
+
+.ertugrul-ghazi{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/dramaofyear.jpg");  
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 3em;
+    height: 360px;
+    text-align: center;
+}
+
+.ertugrul-ghazi .col{
+    width: 60%;
+}
+
+@media (max-width:420px) {
+    *{
+        background-attachment: scroll !important;
+    }
+    input-field button {
+        padding: 12px 5px;
+    }
+    .web-hero{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/mobile\ web.jpg");  
+
+    }
+    .drama-hero{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/drama\ web.jpg");  
+
+    }
+
+    footer .subscribe-form, footer .social-media {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        padding: 0.5em 0;
+        
+    }
+
+    footer .subscribe-input {
+        width: 200px !important;
+       
+    }
+
+
+    footer button{
+        width: 200px;
+    }
+
+    .squid-game .col{
+        width: 70%;
+    }
+
+    .r-right{
+        transform: rotate(0deg) !important;
+    
+    }
+}
